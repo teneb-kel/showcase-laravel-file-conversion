@@ -18,4 +18,3 @@ Route::get('/', function () {
 Route::post('/', 'ImportController@postImport');
 
 Route::post('/export', 'ExportController@postExport');
-Route::get('/export', 'ExportController@postExport');
