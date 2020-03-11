@@ -6,5 +6,5 @@ namespace App\FileFormat\Decoder;
 
 interface DecoderInterface
 {
-    public function decode($data);
+    public function decode(string $data) : array;
 }

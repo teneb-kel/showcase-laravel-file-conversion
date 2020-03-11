@@ -12,7 +12,7 @@ class DecoderFactory
         'csv' => CSVDecoder::class
     ];
 
-    public static function getInstance($format) : DecoderInterface
+    public static function getInstance(string $format) : DecoderInterface
     {
         if (isset(self::DECODERS[strtolower($format)]))
             $decoder = self::DECODERS[strtolower($format)];

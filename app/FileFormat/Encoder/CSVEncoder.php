@@ -6,7 +6,7 @@ namespace App\FileFormat\Encoder;
 
 class CSVEncoder implements EncoderInterface
 {
-    public function encode($data)
+    public function encode(array $data) : string
     {
         // The cleanest solution is to write to a temporary file in memory.
         $f = fopen("php://memory", 'r+');
@@ -24,12 +24,12 @@ class CSVEncoder implements EncoderInterface
         return stream_get_contents($f);
     }
 
-    public function getMime()
+    public function getMime() : string
     {
         return "text/csv";
     }
 
-    public function getFileExtension()
+    public function getFileExtension() : string
     {
         return "csv";
     }

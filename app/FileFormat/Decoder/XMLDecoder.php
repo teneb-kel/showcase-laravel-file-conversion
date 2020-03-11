@@ -6,7 +6,7 @@ namespace App\FileFormat\Decoder;
 
 class XMLDecoder implements DecoderInterface
 {
-    public function decode($data)
+    public function decode(string $data) : array
     {
         $xml = simplexml_load_string($data);
 

@@ -28,19 +28,19 @@ class XMLEncoder implements EncoderInterface
         return $xml_string;
     }
 
-    public function encode($data)
+    public function encode(array $data) : string
     {
         $xml = new \SimpleXMLElement("<root>" . $this->array2XML($data) . "</root>");
 
         return $xml->asXML();
     }
 
-    public function getMime()
+    public function getMime() : string
     {
         return "text/xml";
     }
 
-    public function getFileExtension()
+    public function getFileExtension() : string
     {
         return "xml";
     }

@@ -6,9 +6,9 @@ namespace App\FileFormat\Encoder;
 
 interface EncoderInterface
 {
-    public function encode($data);
+    public function encode(array $data) : string;
 
-    public function getMime();
+    public function getMime() : string;
 
-    public function getFileExtension();
+    public function getFileExtension() : string;
 }

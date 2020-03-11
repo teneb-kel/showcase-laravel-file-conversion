@@ -6,7 +6,7 @@ namespace App\FileFormat\Decoder;
 
 class CSVDecoder implements DecoderInterface
 {
-    public function decode($data)
+    public function decode(string $data) : array
     {
         $data = trim($data);
 
